@@ -1,71 +1,26 @@
+Server-side-Development-with-NodeJS-Express-and-MongoDB
 
-In this assignment you will continue the exploration of Node modules, Express and the REST API. You will design two new express routers to support REST API end points for promotions and leadership.
 
-Step-By-Step Assignment Instructions
-less 
-Assignment Overview
+WEEK 1
+Introduction to Server-side Development
+In this module you will be introduced to Node, Node modules and the Node HTTP server. You will learn about the Express framework and how to set up a REST API using Express.
 
-At the end of this assignment, you should have completed the following tasks to update the server:
+WEEK 2
+Data, Data, Where art Thou Data?
+This module looks in detail at data storage with MongoDB, the popular NoSQL database. You will learn first about Express generator for scaffolding an Express application. Then you will learn about MongoDB. You will learn how to interact with MongoDB from a Node application. Then you will learn the Mongoose ODM to create schemas and models, and interact with MongoDB server.
 
-Created a Node module using Express router to support the routes for the dishes REST API.
+WEEK 3
+Halt! Who goes there?
+This module is dedicated to user authentication. We first develop a full-fledged REST API server with Express, Mongo and Mongoose. Thereafter we examine basic authentication and session-based authentication briefly. We then develop token-based authentication with the support of JSON web tokens and the Passport module.
 
-Created a Node module using Express router to support the routes for the promotions REST API.
+Week 4
+Backend as a Service (BaaS)
+In this module we learn about Mongoose population, a way of cross-referencing documents and populating the documents from other documents. We then review secure communication using HTTPS. We look at Backend as a Service (BaaS) and take a brief look at Loopback.
 
-Created a Node module using Express router to support the routes for the leaders REST API.
-
-Assignment Requirements
-
-The REST API for our Angular and Ionic/Cordova application that we built in the previous courses requires us to support the following REST API end points:
-
-http://localhost:3000/dishes/:dishId
-
-http://localhost:3000/promotions and http://localhost:3000/promotions/:promoId
-
-http://localhost:3000/leaders and http://localhost:3000/leaders/:leaderId
-
-We need to support GET, PUT, POST and DELETE operations on each of the endpoints mentioned above, including supporting the use of route parameters to identify a specific promotion and leader. We have already constructed the REST API for the dishes route in the previous exercise.
-
-This assignment requires you to complete the following three tasks. Detailed instructions for each task are given below.
-
-Task 1
-
-In this task you will create a separate Node module implementing an Express router to support the REST API for the dishes. You can reuse all the code that you implemented in the previous exercise. To do this, you need to complete the following:
-
-Update the Node module named dishRouter.js to implements the Express router for the /dishes/:dishId REST API end point.
-
-Task 2
-
-In this task you will create a separate Node module implementing an Express router to support the REST API for the promotions. To do this, you need to complete the following:
-
-Create a Node module named promoRouter.js that implements the Express router for the /promotions and /promotions/:promoId REST API end points.
-
-Require the Node module you create above within your Express application and mount it on the /promotions route.
-
-Task 3
-
-In this task you will create a separate Node module implementing an Express router to support the REST API for the leaders. To do this, you need to complete the following:
-
-Create a Node module named leaderRouter.js that implements the Express router for the /leaders  and /leaders/:leaderId REST API end points.
-
-Require the Node module you create above within your Express application and mount it on the /leaders route.
-
-Review criteria
-less 
-Upon completion of the assignment, your submission will be reviewed based on the following criteria:
-
-Task 1:
-
-The REST API supports GET, PUT, POST and DELETE operations on /dishes/:dishId end point.
-
-Task 2:
-
-The new Node module, promoRouter is implemented and used within your server to support the /promotions end point.
-
-The REST API supports GET, PUT, POST and DELETE operations on /promotions and GET, PUT, POST and DELETE operations on /promotions/:promoId end points.
-
-Task 3:
-
-The new Node module, leaderRouter is implemented and used within your server to support the /leaders end point.
-
-The REST API supports GET, PUT, POST and DELETE operations on /leadership and GET, PUT, POST and DELETE operations on /leaders/:leaderId end points.
-
+Dependencies
+ASSIGNMENT-1: npm i morgan express body-parser
+ASSIGNMENT-2: npm i bluebird body-parser cookie-parser debug express pug mongoose mongoose-currency morgan serve-favicon
+ASSIGNMENT-3:npm i bluebird body-parser cookie-parser debug express express-session pug jsonwebtoken mongoose mongoose-currency morgan passport passport-jwt passport-local passport-local-mongoose serve-favicon session-file-store
+ASSIGNMENT 4:npm i bluebird body-parser cookie-parser cors debug express express-session pug jsonwebtoken mongoose mongoose-currency morgan multer passport passport-facebook-token passport-jwt passport-local passport-local-mongoose serve-favicon session-file-store
+NOTE:
+For ASSIGNMENT 4...setup an App by going to https://developers.facebook.com/apps/ and register your app by following the instructions there and obtain your App ID and App Secret. Then Paste the App ID in public/index.html and both the ID and Secret in config.js.Also for certificate.pem & private.key https://helpcenter.gsx.com/hc/en-us/articles/115015960428-How-to-Generate-a-Self-Signed-Certificate-and-Private-Key-using-OpenSSL .Generate the keys and paste it in bin folder.
